@@ -15,10 +15,6 @@ on:
   push:
     tags:
       - '*'
-			 
-						
-			
-						
 
 jobs:
 
@@ -26,7 +22,6 @@ jobs:
 
     name: Build OpenWrt and release
     runs-on: ubuntu-latest
-																  
 
     steps:
 
@@ -320,12 +315,7 @@ jobs:
         run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
-			 
-						   
-											 
 
-							 
-											
         uses: actions/upload-artifact@master
         with:
           name: OpenWrt_firmware
