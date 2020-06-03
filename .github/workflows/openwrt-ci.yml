@@ -55,7 +55,7 @@ jobs:
           git remote add openwrt https://github.com/coolsnowwolf/lede.git
           git pull openwrt master
           git remote -v
-          
+
       - name: Update feeds
         run: |
           sed -i 's/\"#src-git\"/\"src-git\"/g' ./feeds.conf.default
@@ -63,7 +63,6 @@ jobs:
           ./scripts/feeds install -a
 
       - name: Generate configuration file
-			  
           rm -f ./.config*
           touch ./.config
           #
